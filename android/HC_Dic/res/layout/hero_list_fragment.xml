@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <!-- filter -->
+    <LinearLayout
+        android:id="@+id/layout_filter"
+        android:orientation="horizontal" >        
+    </LinearLayout>
+    
+	<!-- content -->
+	<GridView
+	    android:id="@+id/view_hero_grid" >	    
+	</GridView>
+	
+	<!-- banner -->
+	<com.google.android.gms.ads.AdView
+	    android:id="@+id/adview_footer_banner" />
+
+</LinearLayout>
