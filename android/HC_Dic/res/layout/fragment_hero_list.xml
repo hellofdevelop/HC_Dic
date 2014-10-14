@@ -12,11 +12,18 @@
     
 	<!-- content -->
 	<GridView
-	    android:id="@+id/view_hero_grid" >	    
-	</GridView>
+	    android:id="@+id/view_hero_grid"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:columnWidth="72dp"
+	    android:gravity="center"
+	    android:numColumns="auto_fit"
+	    android:stretchMode="columnWidth" />
 	
 	<!-- banner -->
 	<com.google.android.gms.ads.AdView
-	    android:id="@+id/adview_footer_banner" />
+	    android:id="@+id/adview_footer_banner"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent" />
 
 </LinearLayout>
