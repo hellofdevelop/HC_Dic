@@ -1,6 +1,6 @@
 package org.hellofdevelp.hc_dic.model;
 
-public class ItemBase {
+public class ItemBase extends ModelBase {
 
 	public enum Grade {
 		
@@ -19,8 +19,6 @@ public class ItemBase {
 	}
 	
 	
-	public final long mId;
-	
 	// 이름
 	public final String mName;
 	
@@ -37,7 +35,7 @@ public class ItemBase {
 			String name,
 			String thumbnailImageUri,
 			Grade grade) {
-		mId = id;
+		super(ModelBase.ModelType.kItem, id);
 		
 		mName = name;
 		

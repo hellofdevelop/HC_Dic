@@ -3,21 +3,35 @@ package org.hellofdevelp.hc_dic.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HeroBase {
+public class HeroBase extends ModelBase {
 	
 	public enum Position {
 		
-		kFront,
-		kCentral,
-		kBack;
+		kFront("Front"),
+		kCentral("Central"),
+		kBack("Back");
+		
+		
+		public final String mCode;
+		
+		private Position(String code) {
+			mCode = code;
+		}
 		
 	}
 
 	public enum Type {
 		
-		kStrength,
-		kIntelligence,
-		kAgility;
+		kStrength("Strength"),
+		kIntelligence("Intelligence"),
+		kAgility("Agility");
+		
+		
+		public final String mCode;
+		
+		private Type(String code) {
+			mCode = code;
+		}
 		
 	}
 	
@@ -43,18 +57,16 @@ public class HeroBase {
 	}
 	
 	
-	public final long mId;
-	
 	// 이름
 	public final String mName;
 	
 	// 소개
 	public final String mIntroduction;
 	
-	// 위치 (프론트, 센터, 백)
+	// 위치
 	public final Position mPosition;
 	
-	// 타입 (스트렝스, 인텔리전트, 어질러티)
+	// 타입
 	public final Type mType;
 	
 	// 썸네일 이미지
@@ -63,17 +75,17 @@ public class HeroBase {
 	// 포트레이트 이미지
 	public final String mPortraitImageUri;
 	
-	// 스킬종류 (4)
+	// 스킬 목록 (4)
 	public final List<SkillBase> mSkillList = new ArrayList<SkillBase>(kHeroSkillListMax);
 	
-	// 성장표 (레벨과 별에 따라 스트렝스, 인텔리전트, 어질러티 성장비율 변경)
+	// 성장표
 	
 	
 	public HeroBase(long id,
 			String name, String introduction,
 			Position position, Type type,
 			String thumbnailImageUri, String portraitImageUri) {
-		mId = id;
+		super(ModelBase.ModelType.kHero, id);
 		
 		mName = name;
 		mIntroduction = introduction;

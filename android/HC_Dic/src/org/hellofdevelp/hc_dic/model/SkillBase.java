@@ -1,9 +1,7 @@
 package org.hellofdevelp.hc_dic.model;
 
-public class SkillBase {
+public class SkillBase extends ModelBase {
 
-	public final long mId;
-	
 	// 이름
 	public final String mName;
 	
@@ -19,7 +17,7 @@ public class SkillBase {
 	public SkillBase(long id,
 			String name, String introduction,
 			String thumbnailImageUri) {
-		mId = id;
+		super(ModelBase.ModelType.kSkill, id);
 		
 		mName = name;
 		mIntroduction = introduction;
