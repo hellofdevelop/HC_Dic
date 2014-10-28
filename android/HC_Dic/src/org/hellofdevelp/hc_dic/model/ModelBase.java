@@ -1,5 +1,7 @@
 package org.hellofdevelp.hc_dic.model;
 
+import com.google.gson.annotations.SerializedName;
+
 public abstract class ModelBase {
 
 	public enum ModelType {
@@ -18,12 +20,14 @@ public abstract class ModelBase {
 	}
 	
 	
+	@SerializedName("model_type")
 	public final ModelType mModelType;
 	
-	public final long mId;
+	@SerializedName("id")
+	public final String mId;
 	
 	
-	public ModelBase(ModelType modelType, long id) {
+	public ModelBase(ModelType modelType, String id) {
 		mModelType = modelType;
 		mId = id;
 	}

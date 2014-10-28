@@ -3,6 +3,8 @@ package org.hellofdevelp.hc_dic.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.google.gson.annotations.SerializedName;
+
 public class HeroBase extends ModelBase {
 	
 	public enum Position {
@@ -57,38 +59,38 @@ public class HeroBase extends ModelBase {
 	}
 	
 	
-	// 이름
+	@SerializedName("name")
 	public final String mName;
 	
-	// 소개
-	public final String mIntroduction;
+	@SerializedName("description")
+	public final String mDescription;
 	
-	// 위치
+	@SerializedName("position")
 	public final Position mPosition;
 	
-	// 타입
+	@SerializedName("type")
 	public final Type mType;
 	
-	// 썸네일 이미지
+	@SerializedName("thumbname_image_uri")
 	public final String mThumbnailImageUri;
 	
-	// 포트레이트 이미지
+	@SerializedName("portrait_image_uri")
 	public final String mPortraitImageUri;
 	
-	// 스킬 목록 (4)
+	@SerializedName("skills")
 	public final List<SkillBase> mSkillList = new ArrayList<SkillBase>(kHeroSkillListMax);
 	
 	// 성장표
 	
 	
-	public HeroBase(long id,
-			String name, String introduction,
+	public HeroBase(String id,
+			String name, String description,
 			Position position, Type type,
 			String thumbnailImageUri, String portraitImageUri) {
 		super(ModelBase.ModelType.kHero, id);
 		
 		mName = name;
-		mIntroduction = introduction;
+		mDescription = description;
 		
 		mPosition = position;
 		mType = type;
@@ -99,7 +101,7 @@ public class HeroBase extends ModelBase {
 	
 	public HeroBase(HeroBase heroBase) {
 		this(heroBase.mId,
-				heroBase.mName, heroBase.mIntroduction,
+				heroBase.mName, heroBase.mDescription,
 				heroBase.mPosition, heroBase.mType,
 				heroBase.mThumbnailImageUri, heroBase.mPortraitImageUri);
 	}

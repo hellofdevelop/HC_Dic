@@ -1,12 +1,14 @@
 package org.hellofdevelp.hc_dic.model;
 
+import com.google.gson.annotations.SerializedName;
+
 public class SkillBase extends ModelBase {
 
-	// 이름
+	@SerializedName("name")
 	public final String mName;
 	
-	// 소개
-	public final String mIntroduction;
+	@SerializedName("description")
+	public final String mDescription;
 	
 	// 썸네일 이미지
 	public final String mThumbnailImageUri;
@@ -14,20 +16,20 @@ public class SkillBase extends ModelBase {
 	// 성장표
 
 	
-	public SkillBase(long id,
-			String name, String introduction,
+	public SkillBase(String id,
+			String name, String description,
 			String thumbnailImageUri) {
 		super(ModelBase.ModelType.kSkill, id);
 		
 		mName = name;
-		mIntroduction = introduction;
+		mDescription = description;
 		
 		mThumbnailImageUri = thumbnailImageUri;
 	}
 	
 	public SkillBase(SkillBase skillBase) {
 		this(skillBase.mId,
-				skillBase.mName, skillBase.mIntroduction,
+				skillBase.mName, skillBase.mDescription,
 				skillBase.mThumbnailImageUri);
 	}
 	

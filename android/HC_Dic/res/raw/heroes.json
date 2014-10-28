@@ -1,0 +1,1699 @@
+{
+	"format":"1",
+	"created":"",
+	"language":"en",
+	"heroes":[
+		{
+			"model_type":"Hero",
+			"id":"",
+			"name":"Ice Mage",
+			"description":"",
+			"position":"Central",
+			"type":"Intelligence",
+			"thumbname_image_uri":"",
+			"portrait_image_uri":"",
+			"skills":[
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Hunting the Maiden",
+					"description":"A powerful elemental storm comes down causing widespread damage"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Cocoon of ice",
+					"description":"Artonia freezes a target in place, damaging and stunning them"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Ice Prison",
+					"description":"A blast of ice damages and slows enemies"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Sigil of Arctus",
+					"description":"Using this Ancient ward, Artonia and her allies slowly recover their energy"
+				},
+				]
+		},
+		{
+			"model_type":"Hero",
+			"id":"",
+			"name":"Lightning Elemental",
+			"description":"",
+			"position":"Front",
+			"type":"Agility",
+			"thumbname_image_uri":"",
+			"portrait_image_uri":"",
+			"skills":[
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Charged Sphere",
+					"description":"Release a Sphere of charged static electricity, causing wide-ranging damage to enemies"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Lightning Strike",
+					"description":"Summons a powerful storm cloud to strike an enemy with multiple bolts of lightning"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Energy Drain",
+					"description":"Steals an enemy's attack power"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Static field",
+					"description":"Arrec uses energy around him to resist incoming magic attack"
+				},
+				]
+		},
+		{
+			"model_type":"Hero",
+			"id":"",
+			"name":"Commando",
+			"description":"",
+			"position":"Back",
+			"type":"Agility",
+			"thumbname_image_uri":"",
+			"portrait_image_uri":"",
+			"skills":[
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Meteor Shower",
+					"description":"Summons meteor shower, causing magic damage to nearby enemies"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Inspiration",
+					"description":"Heroically jumps into the battlefield. All teammates get 25% increased movement speed and attack speed, increasing attack damage and magic power"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Overdraw",
+					"description":"Hits the enemy with magic damage, causing long time stun"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Motivate",
+					"description":"To increase our friendly hidden in the shadow of the moonlight, the agile team"
+				},
+				]
+		},
+		{
+			"model_type":"Hero",
+			"id":"",
+			"name":"Emberstar",
+			"description":"",
+			"position":"Central",
+			"type":"Intelligence",
+			"thumbname_image_uri":"",
+			"portrait_image_uri":"",
+			"skills":[
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Emberstorm",
+					"description":"Eva calls down elemental magic to damage one of her enemies."
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"The Crucible",
+					"description":"Eva summons a blast of flames, causingf magic damage to enemies in a wide range before her."
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Caldera of ash",
+					"description":"A circle of flames rises around a random enemy, causing magic damage and stunning the target."
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Phoenix Feather",
+					"description":"Eva`s mastery of ember increases her Physical Crit."
+				},
+				]
+		},
+		{
+			"model_type":"Hero",
+			"id":"",
+			"name":"Shallows Keeper",
+			"description":"",
+			"position":"Front",
+			"type":"Strength",
+			"thumbname_image_uri":"",
+			"portrait_image_uri":"",
+			"skills":[
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Shallows Keeper",
+					"description":"Moray summons the fury of a sea storm to throw his enemies into the air, stunning them"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Tidal Force",
+					"description":"Moray summons a mighty wave that weaken foes armor"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Anchors Aweigh",
+					"description":"Moray swings a ship's anchor around, damaging any foes who stray close"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Shield of the Deep",
+					"description":"Moray summons a tidal forces to resist damage and bolster his armor"
+				},
+				]
+		},
+		{
+			"model_type":"Hero",
+			"id":"",
+			"name":"Cleric",
+			"description":"",
+			"position":"Front",
+			"type":"Strength",
+			"thumbname_image_uri":"",
+			"portrait_image_uri":"",
+			"skills":[
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Armor of Sprits",
+					"description":"Ryst calls down divine power to protect his allies from physical harm"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Divine Light",
+					"description":"Ryst uses the power of his gods to heal his weakest ally"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Counter Curse",
+					"description":"Rsyt dispels damaging spells and temporarily makes his allies immune from magic damage"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Blessing",
+					"description":"With the blessing of his gods, Ryst reduces the damage all his allies takes"
+				},
+				]
+		},
+		{
+			"model_type":"Hero",
+			"id":"",
+			"name":"Chaplain",
+			"description":"",
+			"position":"Back",
+			"type":"Intelligence",
+			"thumbname_image_uri":"",
+			"portrait_image_uri":"",
+			"skills":[
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Kindred",
+					"description":""
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Pium",
+					"description":""
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Convert",
+					"description":""
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Inviolability",
+					"description":""
+				},
+				]
+		},
+		{
+			"model_type":"Hero",
+			"id":"",
+			"name":"Admiral",
+			"description":"",
+			"position":"Front",
+			"type":"Strength",
+			"thumbname_image_uri":"",
+			"portrait_image_uri":"",
+			"skills":[
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Ancient Sails",
+					"description":""
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Waterspout",
+					"description":""
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Tsunami Pierce",
+					"description":""
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Elder Strength",
+					"description":""
+				},
+				]
+		},
+		{
+			"model_type":"Hero",
+			"id":"",
+			"name":"Sniper",
+			"description":"",
+			"position":"Back",
+			"type":"Agility",
+			"thumbname_image_uri":"",
+			"portrait_image_uri":"",
+			"skills":[
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Sniper",
+					"description":"Perrin takes a shot at the weakest foe, dealing massive damage"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Stunning Shot",
+					"description":"A special round that leaves the target reeling with dizzyness"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Fulminating Shot",
+					"description":"A magical, grenade-like projectile that deal damage over an area"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Agility Boost",
+					"description":"Perrin focuses his reserve energy, giving him a temporary agility boost"
+				},
+				]
+		},
+		{
+			"model_type":"Hero",
+			"id":"",
+			"name":"Leaves Shadow",
+			"description":"",
+			"position":"Back",
+			"type":"Intelligence",
+			"thumbname_image_uri":"",
+			"portrait_image_uri":"",
+			"skills":[
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Arrow Rain",
+					"description":""
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Icespark",
+					"description":""
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Silence",
+					"description":""
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Forest Rage",
+					"description":""
+				},
+				]
+		},
+		{
+			"model_type":"Hero",
+			"id":"",
+			"name":"Depths Voice",
+			"description":"",
+			"position":"Front",
+			"type":"Agility",
+			"thumbname_image_uri":"",
+			"portrait_image_uri":"",
+			"skills":[
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Siren Song",
+					"description":"Talenta uses an old Nedan sleeping-song, forcing her enemies into a deep sleep"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Blade Halo",
+					"description":"A spinning blade damages nearby foes"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Entrap",
+					"description":"Talenta binds an enemy in her magical net, trapping and disabling them"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Untouchable",
+					"description":"Talenta uses ancient Nedanese martial secrets to easily dodge incoming attacks"
+				},
+				]
+		},
+		{
+			"model_type":"Hero",
+			"id":"",
+			"name":"Mystic",
+			"description":"",
+			"position":"Back",
+			"type":"Intelligence",
+			"thumbname_image_uri":"",
+			"portrait_image_uri":"",
+			"skills":[
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Shockwave",
+					"description":"Summons a ball of light energy, building power the longer its channeled."
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Harmony",
+					"description":"Once released, the ball deals magic damage. The longest channeling time is 5 seconds."
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Blind",
+					"description":"The longer it is channeled, the more damage is dealt"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Balance",
+					"description":"Restores mana to the target unit. Not including heroes with full energy) *This should be restores energy, not mana	A blinding light flashes over the target area, knocking back and blinding the units in the area, causing them to miss attacks	Guides all teamates with light, increasing their magic power"
+				},
+				]
+		},
+		{
+			"model_type":"Hero",
+			"id":"",
+			"name":"Lightning Master",
+			"description":"",
+			"position":"Central",
+			"type":"Intelligence",
+			"thumbname_image_uri":"",
+			"portrait_image_uri":"",
+			"skills":[
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Lightning Bolt",
+					"description":""
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Conductivity",
+					"description":""
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Overload",
+					"description":""
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Electrostatic field",
+					"description":""
+				},
+				]
+		},
+		{
+			"model_type":"Hero",
+			"id":"",
+			"name":"Savage One",
+			"description":"",
+			"position":"Front",
+			"type":"Strength",
+			"thumbname_image_uri":"",
+			"portrait_image_uri":"",
+			"skills":[
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Smash and Grab",
+					"description":"Barrand slams the ground, stunning foes in a moderate area"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Arc Swing",
+					"description":"A powerful attack that damages nearby foes"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Corrosion",
+					"description":"Barrand weakens the armour of enemies"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Elder Strength",
+					"description":"Barrand increases his own strength and attack power"
+				},
+				]
+		},
+		{
+			"model_type":"Hero",
+			"id":"",
+			"name":"Machinist",
+			"description":"",
+			"position":"Central",
+			"type":"Intelligence",
+			"thumbname_image_uri":"",
+			"portrait_image_uri":"",
+			"skills":[
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Overcharge",
+					"description":"Lirune over-charges his weaponry capacitors, causing his machine to unleash a barrage of attacks"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Charged Shot",
+					"description":"Lirune fires a magical beams weapon to damage his target and reduce target's attack accuracy"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Seeker",
+					"description":"A missilie that seeks out the target and explodes, dealing damage over a small radius."
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"The Red Button",
+					"description":"Lirune presses the red button, breatly increasing his attack rate"
+				},
+				]
+		},
+		{
+			"model_type":"Hero",
+			"id":"",
+			"name":"War Chief",
+			"description":"",
+			"position":"Front",
+			"type":"Strength",
+			"thumbname_image_uri":"",
+			"portrait_image_uri":"",
+			"skills":[
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Hammer Throw",
+					"description":"Garl throws a hammer at a target, causing damage and stunning them"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Power Swing",
+					"description":"A mighty cut that results in massive damage"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Kreln Bloodcall",
+					"description":"Grant's a life-stealing ability to all units"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Rage",
+					"description":"Garl flies into a furious rage, greatly increasing his hitpoints"
+				},
+				]
+		},
+		{
+			"model_type":"Hero",
+			"id":"",
+			"name":"Psychopath",
+			"description":"",
+			"position":"Front",
+			"type":"Intelligence",
+			"thumbname_image_uri":"",
+			"portrait_image_uri":"",
+			"skills":[
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Kreh Shout",
+					"description":"An old spell to damage enemies and can be triggered multiple times"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Firebomb",
+					"description":"Bokka throws a firebomb at his target, possibly causing splash damage and multiple fires as well."
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Blood Call",
+					"description":"Increases the attack capacity and casting speed of a random ally."
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Elder Strength",
+					"description":"Bokka's strength is bolstered"
+				},
+				]
+		},
+		{
+			"model_type":"Hero",
+			"id":"",
+			"name":"Deathknight",
+			"description":"",
+			"position":"Front",
+			"type":"Strength",
+			"thumbname_image_uri":"",
+			"portrait_image_uri":"",
+			"skills":[
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Agile Recovery",
+					"description":"Deathknight creates a shield that absorbs damage shield damage absorption into the life value of the Deathknight."
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Death Coil",
+					"description":"Fire death coil into the weakest units on the battlefield. if he is an enemy, death coil may be magic damage to him, if he is a friendly, death coil will treat his life value."
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Ward",
+					"description":"With dark energy to creat a dark shield, to protect the weak. When dark shield disappeared, dark energy will be an explosion, magic damage to neraby enemies"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Null Barrier",
+					"description":"Deathknight's side it combines powerful frost ward, can protect his teammates, resist spell damage"
+				},
+				]
+		},
+		{
+			"model_type":"Hero",
+			"id":"",
+			"name":"Wind Master",
+			"description":"",
+			"position":"Back",
+			"type":"Intelligence",
+			"thumbname_image_uri":"",
+			"portrait_image_uri":"",
+			"skills":[
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Gale Force",
+					"description":"Sarra uses wind-enchanted arrows to knock back and damage enemies in front of her"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Concussion",
+					"description":"A magic attack that deals damage and dizzying effect"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Hailstorm",
+					"description":"Sarra fires off several arrows at her target in rapid succession"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Wind Dance",
+					"description":"Sarra uses her wind-dancing techniques to easily dodge and evade attack"
+				},
+				]
+		},
+		{
+			"model_type":"Hero",
+			"id":"",
+			"name":"Necromancer",
+			"description":"",
+			"position":"Central",
+			"type":"Intelligence",
+			"thumbname_image_uri":"",
+			"portrait_image_uri":"",
+			"skills":[
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Vampiric Strike",
+					"description":"Causes magic damage over time, stealing the target's HP"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Kreln Shout",
+					"description":"A powerful attack of soul energy, damaging opponents over a moderate area"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Exile",
+					"description":"Disable's an enemy's ability to cast spells while dealing magic damage"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Sacrid Sigil",
+					"description":"Salar uses a mystic sigil which resists enemy magic and increases the magic resistance to all allies"
+				},
+				]
+		},
+		{
+			"model_type":"Hero",
+			"id":"",
+			"name":"Shadow Shaman",
+			"description":"",
+			"position":"Central",
+			"type":"Intelligence",
+			"thumbname_image_uri":"",
+			"portrait_image_uri":"",
+			"skills":[
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Dark Benefactor",
+					"description":"Shadow Shaman sends a wave of shadow that cures allies"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Shadow Curse",
+					"description":"Ara'ak reaches through the shadow void to poison an enemy"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Vayne's Blessing",
+					"description":"Defends whichever ally has the lowest HP from death for a period of time"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Weave",
+					"description":"Ara'ak fracture reality, bleeding into the shadow void, reducing the armor of all enemies"
+				},
+				]
+		},
+		{
+			"model_type":"Hero",
+			"id":"",
+			"name":"Professional Killer",
+			"description":"",
+			"position":"Back",
+			"type":"Agility",
+			"thumbname_image_uri":"",
+			"portrait_image_uri":"",
+			"skills":[
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Dark Contract",
+					"description":"Punchinello signs a demonic contract to fill his HP and increase his attack"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Blast Shot",
+					"description":"Fires an explosive rocket to deal bonuses damage"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Poison Shot",
+					"description":"A rapid fire-attack"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Embrace of Shadows",
+					"description":"Punchinello hides in the dark then strikes without warning, increasing his critical chance"
+				},
+				]
+		},
+		{
+			"model_type":"Hero",
+			"id":"",
+			"name":"Silencer",
+			"description":"",
+			"position":"Central",
+			"type":"Intelligence",
+			"thumbname_image_uri":"",
+			"portrait_image_uri":"",
+			"skills":[
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Strategist",
+					"description":"Saif is versatile, capable of taking down enemy mages or holding his own in a stand-up fight"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Silence",
+					"description":"Silences an enemy, preventing them using skill accompanied with magic damage. this skill also causes magic damage"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Befuddle",
+					"description":"Enemies over an area lose their ability to cast while also taking health and energy damage"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Searing Aura",
+					"description":"A powerful effect that damage an enemy with holy fire"
+				},
+				]
+		},
+		{
+			"model_type":"Hero",
+			"id":"",
+			"name":"Pilot",
+			"description":"",
+			"position":"Back",
+			"type":"Intelligence",
+			"thumbname_image_uri":"",
+			"portrait_image_uri":"",
+			"skills":[
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Firebomb",
+					"description":"Use the important goals of the bomb to hit enemy rear, causes physical damage."
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Hellfire Missile",
+					"description":"Launches a Hellfire Missiles, through the in front of the enemy behind enemy lines."
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Air Strike",
+					"description":"To hit the enemy causing physical damage and stun"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"AP Ammo",
+					"description":"Aircraft enemy positions, all enemies with machine gun fire	Pilot using AP Ammo. Increase the armor penetration"
+				},
+				]
+		},
+		{
+			"model_type":"Hero",
+			"id":"",
+			"name":"Imperial Executioner",
+			"description":"",
+			"position":"Central",
+			"type":"Intelligence",
+			"thumbname_image_uri":"",
+			"portrait_image_uri":"",
+			"skills":[
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Smite",
+					"description":"A blaze of energy strikes a target, dealing massive magical damage."
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Thorn",
+					"description":"Lodot summons a thorn that knocks the victim into the sky, dealing a small amount collateral magic damage"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Power Strike",
+					"description":"A powerful magic against a single target and turns it into an animal"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Uncanny Edge",
+					"description":"Lodot makes a pact with demonic forces to increase his critical chance"
+				},
+				]
+		},
+		{
+			"model_type":"Hero",
+			"id":"",
+			"name":"Vengeance Spirit",
+			"description":"",
+			"position":"Central",
+			"type":"Agility",
+			"thumbname_image_uri":"",
+			"portrait_image_uri":"",
+			"skills":[
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Petrify",
+					"description":"Nasira petrifies a group of enemies over a moderate area"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Purify",
+					"description":"Nasira delivers physical damage to 4 enemies but reduces half of the original damage"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Theft of Essence",
+					"description":"Nasira summons a snake and steals energy from many enemies, increasing her own"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Spite",
+					"description":"A magical barrier that increases Nasira's HP"
+				},
+				]
+		},
+		{
+			"model_type":"Hero",
+			"id":"",
+			"name":"Ferryman",
+			"description":"",
+			"position":"Central",
+			"type":"Agility",
+			"thumbname_image_uri":"",
+			"portrait_image_uri":"",
+			"skills":[
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Tortured Spirit",
+					"description":"Shalandar releases hungry ghosts that deal damage over a broad area"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Shades",
+					"description":"A vengeful shades deal damage over small, moderate and ranged areas"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Mastery of Death",
+					"description":"Ferryman increases his attack damage every time a Hero dies. the effect of skill Shades is also increased"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Haunting of Dark Lord",
+					"description":"Ferryman terrifies all enemies nearby and greatly reduce their attack damage"
+				},
+				]
+		},
+		{
+			"model_type":"Hero",
+			"id":"",
+			"name":"Psychic Sword",
+			"description":"",
+			"position":"Back",
+			"type":"Agility",
+			"thumbname_image_uri":"",
+			"portrait_image_uri":"",
+			"skills":[
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Sacrifice",
+					"description":"Instantaneously swaps position with a target. if the Avenge has learned Magic Missile, a Magic Missile will hit the enemy simultaneously"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Kinetic Bolt",
+					"description":"Unleash a magic arrow, dealing magic damage and causing the target stunned"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Inspire Terror",
+					"description":"Arouse enemies' inner fear, dealing magic damage in a large area and weakening their armor"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Rally",
+					"description":"Fight in the name of vengeance, increasing all enemies melee attack damage"
+				},
+				]
+		},
+		{
+			"model_type":"Hero",
+			"id":"",
+			"name":"Old Curse",
+			"description":"",
+			"position":"Central",
+			"type":"Intelligence",
+			"thumbname_image_uri":"",
+			"portrait_image_uri":"",
+			"skills":[
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Chilling Wave",
+					"description":"Old Curse launches out an icy blast, freezing all enemies that touch it after a short time period"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Themal Shock",
+					"description":"An icy blast followed by a wave of fire launches out in a path in front of Old Curse, causing magic damage twice to the enemies in front"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Flame Strike",
+					"description":"Old Curse lays down a line of flame in front of him, each dealing damage per second to enemy units in a wide area of effect"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Magma",
+					"description":"Old Curse burns his enemies in an area of effect with fire. Liquid Fire flows a short distance after hitting a target"
+				},
+				]
+		},
+		{
+			"model_type":"Hero",
+			"id":"",
+			"name":"Soulhunter",
+			"description":"",
+			"position":"Front",
+			"type":"Intelligence",
+			"thumbname_image_uri":"",
+			"portrait_image_uri":"",
+			"skills":[
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"",
+					"description":""
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"",
+					"description":""
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"",
+					"description":""
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"",
+					"description":""
+				},
+				]
+		},
+		{
+			"model_type":"Hero",
+			"id":"",
+			"name":"Bear Warrior",
+			"description":"",
+			"position":"Front",
+			"type":"Agility",
+			"thumbname_image_uri":"",
+			"portrait_image_uri":"",
+			"skills":[
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Maul",
+					"description":"A rushing charge attacking, dealing damage to all enemies in his way"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Shockwave",
+					"description":"Mayor Bar strikes the ground with his claw, damaging all enemies nearby"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Ursine Focus",
+					"description":"Mayor Bar summons the aspect of the bear, increasing his critical strike odds"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Spirit of Ursa",
+					"description":"The spirit of the bear enhances Mayor Bar's attack power"
+				},
+				]
+		},
+		{
+			"model_type":"Hero",
+			"id":"",
+			"name":"Warrior Monk",
+			"description":"",
+			"position":"Front",
+			"type":"Strength",
+			"thumbname_image_uri":"",
+			"portrait_image_uri":"",
+			"skills":[
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Earthshatter",
+					"description":"Kenrick crack and tears the earth's surface, dealing damage and stunning his foe"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Broadswing",
+					"description":"Kenrick strikes with a broad sweep, harming and stunning enemies"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Quake",
+					"description":"Kenrick strikes the earth, causing damage and stunning enemies"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Elder Strength",
+					"description":"The tauren strengthen their physique, sharply increasing strength"
+				},
+				]
+		},
+		{
+			"model_type":"Hero",
+			"id":"",
+			"name":"Lunar Guardian",
+			"description":"",
+			"position":"Central",
+			"type":"Agility",
+			"thumbname_image_uri":"",
+			"portrait_image_uri":"",
+			"skills":[
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Lunar Barrage",
+					"description":"Summon the power of Boaz, striking random enemies with beams of powerful lunar energy"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Lunar Judgment",
+					"description":"Summon the power of Jachin, striking a target with lunar ray"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Moonblade",
+					"description":"Lunar guardian's sword bounce between enemies, causing more physical damage, after each ejection damage is reduced"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Chosen of Boaz",
+					"description":"Share month god's blessing toa all teammates. increase the team's physical damage"
+				},
+				]
+		},
+		{
+			"model_type":"Hero",
+			"id":"",
+			"name":"Mountain",
+			"description":"",
+			"position":"Front",
+			"type":"Strength",
+			"thumbname_image_uri":"",
+			"portrait_image_uri":"",
+			"skills":[
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Throw",
+					"description":"Aetna grabs an enemy and tosses them, causing damage on impact"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Caber",
+					"description":"Aetna uproots a tree, giving him better range and damage"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Rockslide",
+					"description":"Aetna causes rocks to rain down on an area, damaging and stunning foes"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Stoneskin",
+					"description":"Aetna's granite skin protects him from damage"
+				},
+				]
+		},
+		{
+			"model_type":"Hero",
+			"id":"",
+			"name":"Succubus",
+			"description":"",
+			"position":"Central",
+			"type":"Intelligence",
+			"thumbname_image_uri":"",
+			"portrait_image_uri":"",
+			"skills":[
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Soulshout",
+					"description":"Tala shouts across the ethereal plane, damaging all enemies"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Venomdar",
+					"description":"Tala throws a blade covered in powerful venom"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Soul Blaze",
+					"description":"Tala release a potent scream, tearing into enemies ahead of her"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Chaos Dance",
+					"description":"Tala phases in and out of the mortal plane, easily dodging incoming damage"
+				},
+				]
+		},
+		{
+			"model_type":"Hero",
+			"id":"",
+			"name":"Master Mage",
+			"description":"",
+			"position":"Central",
+			"type":"Intelligence",
+			"thumbname_image_uri":"",
+			"portrait_image_uri":"",
+			"skills":[
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Sunsphere",
+					"description":"Fiera releases powerful magics among her foes, damaging those who rely on their strength and speed"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Fireball",
+					"description":"Fiera attacks a foe with a ball of raw magical energy"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Black Mark",
+					"description":"Fiera chooses a random enemy to exile"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Third Eye",
+					"description":"Fiera pulls energy out of space, expanding her intelligence"
+				},
+				]
+		},
+		{
+			"model_type":"Hero",
+			"id":"",
+			"name":"Wandering Spearman",
+			"description":"",
+			"position":"Central",
+			"type":"Strength",
+			"thumbname_image_uri":"",
+			"portrait_image_uri":"",
+			"skills":[
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Blood Pack",
+					"description":"Divine warrior oath with the enemy, 40% remaining consumption itself, to the enemy by suicide charge, short time greatly improve their damage and attack speed"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Sacrifice",
+					"description":"Let the spear with blood burning, cause additional damage over time to hit the enemy"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Gift",
+					"description":"Using the traditional troll medical skill, his teammates for the treatment of injury is the most serious, the continued respond to life in a period of time."
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Spell Resistance",
+					"description":"Berserker blood could let him have roaches general viability, increase spells"
+				},
+				]
+		},
+		{
+			"model_type":"Hero",
+			"id":"",
+			"name":"Brute",
+			"description":"",
+			"position":"Front",
+			"type":"Strength",
+			"thumbname_image_uri":"",
+			"portrait_image_uri":"",
+			"skills":[
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Axe of Elimination",
+					"description":"Unlock strikes without mercy: Those near death suffer massive damage, the healthy ones take less"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Bloodcurse",
+					"description":"Unlock curses his opponents, causing them to lose HP over a period of time"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Cleaving Attack",
+					"description":"A powerful attack that damages all nearby foes"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Dark Resistance",
+					"description":"Unlock connection to kreln blood-magic enhances his armor"
+				},
+				]
+		},
+		{
+			"model_type":"Hero",
+			"id":"",
+			"name":"Poisoned One",
+			"description":"",
+			"position":"Central",
+			"type":"Intelligence",
+			"thumbname_image_uri":"",
+			"portrait_image_uri":"",
+			"skills":[
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Acid Splash",
+					"description":"Poisoned One spit out a cloud of poison, and cause huge damage over time."
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Toxic Spit",
+					"description":"Poisoned One shoot a small poison, magic damage to enemy. Poison to corrosion of the enemy's armor and sustained damage over a period of time"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Salve of Resistance",
+					"description":"Poisoned One body covered with toxins, can resist the magic damage"
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Envenom",
+					"description":"Poisoned One quenching on his arrow poison, a sharp rise in the physical damage"
+				},
+				]
+		},
+		{
+			"model_type":"Hero",
+			"id":"",
+			"name":"Swordmaster",
+			"description":"",
+			"position":"Front",
+			"type":"Intelligence",
+			"thumbname_image_uri":"",
+			"portrait_image_uri":"",
+			"skills":[
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"",
+					"description":""
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"",
+					"description":""
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"",
+					"description":""
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"",
+					"description":""
+				},
+				]
+		},
+		{
+			"model_type":"Hero",
+			"id":"",
+			"name":"Frost Mage",
+			"description":"",
+			"position":"Central",
+			"type":"Intelligence",
+			"thumbname_image_uri":"",
+			"portrait_image_uri":"",
+			"skills":[
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"",
+					"description":""
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"",
+					"description":""
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"",
+					"description":""
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"",
+					"description":""
+				},
+				]
+		},
+		{
+			"model_type":"Hero",
+			"id":"",
+			"name":"Death Mage",
+			"description":"",
+			"position":"Central",
+			"type":"Intelligence",
+			"thumbname_image_uri":"",
+			"portrait_image_uri":"",
+			"skills":[
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"",
+					"description":""
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"",
+					"description":""
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"",
+					"description":""
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"",
+					"description":""
+				},
+				]
+		},
+		{
+			"model_type":"Hero",
+			"id":"",
+			"name":"Tusked Storm",
+			"description":"",
+			"position":"Central",
+			"type":"Intelligence",
+			"thumbname_image_uri":"",
+			"portrait_image_uri":"",
+			"skills":[
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"",
+					"description":""
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"",
+					"description":""
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"",
+					"description":""
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"",
+					"description":""
+				},
+				]
+		},
+		{
+			"model_type":"Hero",
+			"id":"",
+			"name":"Drunken Master",
+			"description":"",
+			"position":"Front",
+			"type":"Strength",
+			"thumbname_image_uri":"",
+			"portrait_image_uri":"",
+			"skills":[
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Concussive Blow",
+					"description":"Lien strikes down his enemies, causing physical damage."
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Intoxicate",
+					"description":"Lien splashes his enemies with potent magical wine, making them drunk and clumsy."
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Shaking Strike",
+					"description":"Lien stomps down into a group of enemies, causing damage and leaving them dizzy."
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"Focus",
+					"description":"Lien focuses inward, giving him more strength."
+				},
+				]
+		},
+		{
+			"model_type":"Hero",
+			"id":"",
+			"name":"Arcane Sapper",
+			"description":"",
+			"position":"Front",
+			"type":"Intelligence",
+			"thumbname_image_uri":"",
+			"portrait_image_uri":"",
+			"skills":[
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"",
+					"description":""
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"",
+					"description":""
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"",
+					"description":""
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"",
+					"description":""
+				},
+				]
+		},
+		{
+			"model_type":"Hero",
+			"id":"",
+			"name":"Fallen Dominion",
+			"description":"",
+			"position":"Front",
+			"type":"Intelligence",
+			"thumbname_image_uri":"",
+			"portrait_image_uri":"",
+			"skills":[
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"",
+					"description":""
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"",
+					"description":""
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"",
+					"description":""
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"",
+					"description":""
+				},
+				]
+		},
+		{
+			"model_type":"Hero",
+			"id":"",
+			"name":"Rifleman",
+			"description":"",
+			"position":"Central",
+			"type":"Intelligence",
+			"thumbname_image_uri":"",
+			"portrait_image_uri":"",
+			"skills":[
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"",
+					"description":""
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"",
+					"description":""
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"",
+					"description":""
+				},
+				{
+					"model_type":"Skill",
+					"id":"",
+					"name":"",
+					"description":""
+				},
+				]
+		},
+		]
+}

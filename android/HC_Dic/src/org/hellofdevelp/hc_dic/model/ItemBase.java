@@ -31,7 +31,7 @@ public class ItemBase extends ModelBase {
 	// 필요 재료
 
 	
-	public ItemBase(long id,
+	public ItemBase(String id,
 			String name,
 			String thumbnailImageUri,
 			Grade grade) {
