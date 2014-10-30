@@ -3,6 +3,7 @@ package org.hellofdevelp.hc_dic.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 
 public class HeroBase extends ModelBase {
@@ -77,10 +78,10 @@ public class HeroBase extends ModelBase {
 	@SerializedName("portrait_image_uri")
 	public final String mPortraitImageUri;
 	
-	@SerializedName("skills")
+	@SerializedName("skill_list")
 	public final List<SkillBase> mSkillList = new ArrayList<SkillBase>(kHeroSkillListMax);
 	
-	// 성장표
+	// TODO: 성장표 필요
 	
 	
 	public HeroBase(String id,
@@ -104,6 +105,12 @@ public class HeroBase extends ModelBase {
 				heroBase.mName, heroBase.mDescription,
 				heroBase.mPosition, heroBase.mType,
 				heroBase.mThumbnailImageUri, heroBase.mPortraitImageUri);
+	}
+
+	@Override
+	public String toString() {
+		Gson gson = new Gson();
+		return gson.toJson(this);
 	}
 	
 }

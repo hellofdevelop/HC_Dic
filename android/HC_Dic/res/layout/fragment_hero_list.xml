@@ -3,31 +3,40 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-    
+
     <!-- filter -->
+
     <LinearLayout
         android:id="@+id/layout_filter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >        
+        android:orientation="horizontal" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="#dfdfdf" />
     </LinearLayout>
-    
-	<!-- content -->
-	<GridView
-	    android:id="@+id/view_hero_grid"
-	    android:layout_width="match_parent"
-	    android:layout_height="match_parent"
-	    android:columnWidth="72dp"
-	    android:gravity="center"
-	    android:numColumns="auto_fit"
-	    android:stretchMode="columnWidth" />
-	
-	<!-- banner -->
-	<!--
+
+    <!-- content -->
+
+    <GridView
+        android:id="@+id/view_hero_grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnWidth="90dp"
+        android:gravity="center"
+        android:horizontalSpacing="10dp"
+        android:numColumns="auto_fit"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="10dp" />
+
+    <!-- banner -->
+    <!--
 	<com.google.android.gms.ads.AdView
 	    android:id="@+id/adview_footer_banner"
 	    android:layout_width="match_parent"
 	    android:layout_height="match_parent" />
-	-->
+    -->
 
 </LinearLayout>

@@ -1,5 +1,6 @@
 package org.hellofdevelp.hc_dic.model;
 
+import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 
 public class SkillBase extends ModelBase {
@@ -10,7 +11,7 @@ public class SkillBase extends ModelBase {
 	@SerializedName("description")
 	public final String mDescription;
 	
-	// 썸네일 이미지
+	@SerializedName("thumbnail_image_uri")
 	public final String mThumbnailImageUri;
 	
 	// 성장표
@@ -31,6 +32,12 @@ public class SkillBase extends ModelBase {
 		this(skillBase.mId,
 				skillBase.mName, skillBase.mDescription,
 				skillBase.mThumbnailImageUri);
+	}
+
+	@Override
+	public String toString() {
+		Gson gson = new Gson();
+		return gson.toJson(this);
 	}
 	
 }

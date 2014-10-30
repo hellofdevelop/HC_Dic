@@ -1,5 +1,8 @@
 package org.hellofdevelp.hc_dic.model;
 
+import com.google.gson.Gson;
+import com.google.gson.annotations.SerializedName;
+
 public class ItemBase extends ModelBase {
 
 	public enum Grade {
@@ -19,17 +22,17 @@ public class ItemBase extends ModelBase {
 	}
 	
 	
-	// 이름
+	@SerializedName("name")
 	public final String mName;
 	
-	// 썸네일 이미지
+	@SerializedName("thumbnail_image_uri")
 	public final String mThumbnailImageUri;
 	
-	// 등급 (회색, 녹색, 파랑, 보라)
+	@SerializedName("grade")
 	public final Grade mGrade;
-	
-	// 필요 재료
 
+	// 성장표 필요
+	
 	
 	public ItemBase(String id,
 			String name,
@@ -49,6 +52,12 @@ public class ItemBase extends ModelBase {
 				itemBase.mName,
 				itemBase.mThumbnailImageUri,
 				itemBase.mGrade);
+	}
+
+	@Override
+	public String toString() {
+		Gson gson = new Gson();
+		return gson.toJson(this);
 	}
 	
 }

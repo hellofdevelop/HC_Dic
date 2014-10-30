@@ -4,5 +4,8 @@
     <string name="app_name">HC_Dic</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    
+    <!-- common -->
+    <string name="empty"></string>
 
 </resources>

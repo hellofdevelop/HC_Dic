@@ -1,5 +1,7 @@
 package org.hellofdevelp.hc_dic.model;
 
+import com.google.gson.Gson;
+
 
 public class SkillProgress extends SkillBase {
 
@@ -8,6 +10,12 @@ public class SkillProgress extends SkillBase {
 	
 	public SkillProgress(SkillBase skillBase) {
 		super(skillBase);
+	}
+
+	@Override
+	public String toString() {
+		Gson gson = new Gson();
+		return gson.toJson(this);
 	}
 	
 }

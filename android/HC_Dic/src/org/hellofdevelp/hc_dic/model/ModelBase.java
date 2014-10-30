@@ -1,5 +1,6 @@
 package org.hellofdevelp.hc_dic.model;
 
+import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 
 public abstract class ModelBase {
@@ -30,6 +31,12 @@ public abstract class ModelBase {
 	public ModelBase(ModelType modelType, String id) {
 		mModelType = modelType;
 		mId = id;
+	}
+
+	@Override
+	public String toString() {
+		Gson gson = new Gson();
+		return gson.toJson(this);
 	}
 	
 }
