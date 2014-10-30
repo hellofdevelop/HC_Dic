@@ -46,6 +46,7 @@ public class HeroListFragment extends BaseFragment
 		
 		mHeroListAdapter = new HeroListAdapter(this.getActivity(), R.layout.view_hero_thumbnail);
 		
+		// init view
 		{
 			GridView heroGridView = (GridView) rootView.findViewById(R.id.view_hero_grid);
 			heroGridView.setAdapter(mHeroListAdapter);

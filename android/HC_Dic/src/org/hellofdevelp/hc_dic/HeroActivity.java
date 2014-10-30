@@ -9,9 +9,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class MainActivity extends FragmentActivity {
+public class HeroActivity extends FragmentActivity {
 	
-	private static final String TAG = MainActivity.class.getSimpleName();
+	private static final String TAG = HeroActivity.class.getSimpleName();
 	private static final boolean DEBUG = Const.DEBUG;
 
 	
