@@ -26,6 +26,9 @@ public class HeroesLoader extends AsyncTaskLoader<List<HeroBase>> {
 	
 	public HeroesLoader(Context context) {
 		super(context);
+		
+		// TODO: need observer
+		// http://www.androiddesignpatterns.com/2012/08/implementing-loaders.html
 	}
 	
 	@Override
