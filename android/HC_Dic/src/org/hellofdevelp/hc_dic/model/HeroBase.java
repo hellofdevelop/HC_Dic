@@ -72,7 +72,7 @@ public class HeroBase extends ModelBase {
 	@SerializedName("type")
 	public final Type mType;
 	
-	@SerializedName("thumbname_image_uri")
+	@SerializedName("thumbnail_image_uri")
 	public final String mThumbnailImageUri;
 	
 	@SerializedName("portrait_image_uri")

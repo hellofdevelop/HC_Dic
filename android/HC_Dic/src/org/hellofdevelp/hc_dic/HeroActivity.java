@@ -19,14 +19,16 @@ public class HeroActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        
-        Fragment fragment = new HeroListFragment();
-        
-        FragmentManager fm = getSupportFragmentManager();
-        FragmentTransaction transaction = fm.beginTransaction();
-        transaction.replace(R.id.fragment_container, fragment);
-        //transaction.addToBackStack(null);
-        transaction.commit();
+
+        // open HeroList
+        {
+            Fragment fragment = new HeroListFragment();
+            
+            FragmentManager fm = getSupportFragmentManager();
+            FragmentTransaction transaction = fm.beginTransaction();
+            transaction.replace(R.id.fragment_container, fragment);
+            transaction.commit();
+        }
     }
 
 	@Override

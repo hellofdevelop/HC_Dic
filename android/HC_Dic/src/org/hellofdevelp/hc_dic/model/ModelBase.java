@@ -20,11 +20,14 @@ public abstract class ModelBase {
 		
 	}
 	
+	public static final String kKEY_MODEL_TYPE = "model_type";
+	public static final String kKEY_ID = "id";
 	
-	@SerializedName("model_type")
+	
+	@SerializedName(kKEY_MODEL_TYPE)
 	public final ModelType mModelType;
 	
-	@SerializedName("id")
+	@SerializedName(kKEY_ID)
 	public final String mId;
 	
 	
