@@ -199,8 +199,8 @@ public class HeroListFragment extends BaseFragment
 			AdRequest adRequest = new AdRequest.Builder()
 					.addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
 					.build();
-			footerBannerAdView.setAdSize(AdSize.SMART_BANNER);
-			footerBannerAdView.setAdUnitId(getString(R.string.adunit_hero_list_footer_banner));
+			//footerBannerAdView.setAdSize(AdSize.SMART_BANNER);
+			//footerBannerAdView.setAdUnitId(getString(R.string.adunit_hero_list_footer_banner));
 			footerBannerAdView.setAdListener(new AdListener() {
 
 				@Override

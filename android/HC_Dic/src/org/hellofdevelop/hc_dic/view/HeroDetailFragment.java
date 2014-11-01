@@ -240,8 +240,8 @@ implements LoaderManager.LoaderCallbacks<List<HeroBase>> {
 			AdRequest adRequest = new AdRequest.Builder()
 					.addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
 					.build();
-			footerBannerAdView.setAdSize(AdSize.SMART_BANNER);
-			footerBannerAdView.setAdUnitId(getString(R.string.adunit_hero_detail_footer_banner));
+			//footerBannerAdView.setAdSize(AdSize.SMART_BANNER);
+			//footerBannerAdView.setAdUnitId(getString(R.string.adunit_hero_detail_footer_banner));
 			footerBannerAdView.setAdListener(new AdListener() {
 
 				@Override
