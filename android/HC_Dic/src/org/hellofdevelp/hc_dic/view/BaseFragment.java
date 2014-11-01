@@ -1,4 +1,6 @@
-package org.hellofdevelp.hc_dic;
+package org.hellofdevelp.hc_dic.view;
+
+import org.hellofdevelp.hc_dic.Const;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

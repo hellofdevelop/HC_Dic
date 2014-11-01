@@ -1,7 +1,12 @@
-package org.hellofdevelp.hc_dic;
+package org.hellofdevelp.hc_dic.view;
 
 import java.util.List;
 
+import org.hellofdevelp.hc_dic.Const;
+import org.hellofdevelp.hc_dic.R;
+import org.hellofdevelp.hc_dic.R.id;
+import org.hellofdevelp.hc_dic.R.layout;
+import org.hellofdevelp.hc_dic.R.string;
 import org.hellofdevelp.hc_dic.content.HeroesLoader;
 import org.hellofdevelp.hc_dic.model.HeroBase;
 import org.hellofdevelp.hc_dic.util.StringUtil;

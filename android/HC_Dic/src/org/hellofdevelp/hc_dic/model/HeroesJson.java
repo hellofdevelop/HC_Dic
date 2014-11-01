@@ -5,7 +5,7 @@ import java.util.List;
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 
-public class JsonHeroes {
+public class HeroesJson {
 
 	@SerializedName("format")
 	public String mFormat;

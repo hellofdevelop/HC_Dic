@@ -7,6 +7,10 @@
     <uses-sdk
         android:minSdkVersion="14"
         android:targetSdkVersion="19" />
+    
+    <!-- for google mobile services -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -19,7 +23,7 @@
             android:value="@integer/google_play_services_version" />
 
         <activity
-            android:name=".HeroActivity"
+            android:name="org.hellofdevelp.hc_dic.view.HeroActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

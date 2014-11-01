@@ -8,7 +8,7 @@ import java.util.List;
 import org.hellofdevelp.hc_dic.Const;
 import org.hellofdevelp.hc_dic.R;
 import org.hellofdevelp.hc_dic.model.HeroBase;
-import org.hellofdevelp.hc_dic.model.JsonHeroes;
+import org.hellofdevelp.hc_dic.model.HeroesJson;
 
 import com.google.gson.Gson;
 
@@ -35,7 +35,7 @@ public class HeroesLoader extends AsyncTaskLoader<List<HeroBase>> {
 	public List<HeroBase> loadInBackground() {
 		if (DEBUG) Log.v(TAG, "");
 
-		JsonHeroes jsonHeroes = loadJsonHeroes();
+		HeroesJson jsonHeroes = loadJsonHeroes();
 		
 		return jsonHeroes.mHeroes;
 	}
@@ -90,8 +90,8 @@ public class HeroesLoader extends AsyncTaskLoader<List<HeroBase>> {
 		}
 	}
 
-	private JsonHeroes loadJsonHeroes() {
-		JsonHeroes jsonHeroes = null;
+	private HeroesJson loadJsonHeroes() {
+		HeroesJson jsonHeroes = null;
 		
 		InputStream is = getContext().getResources().openRawResource(R.raw.heroes);
 		Gson gson = new Gson();
@@ -99,7 +99,7 @@ public class HeroesLoader extends AsyncTaskLoader<List<HeroBase>> {
 		try {
 		    BufferedReader reader = new BufferedReader(new InputStreamReader(is, "UTF-8"));
 		    
-		    jsonHeroes = gson.fromJson(reader, JsonHeroes.class);
+		    jsonHeroes = gson.fromJson(reader, HeroesJson.class);
 		    if (DEBUG) Log.d(TAG, jsonHeroes.toString());
 		} catch (Exception ex) {
 			Log.e(TAG, "", ex);
