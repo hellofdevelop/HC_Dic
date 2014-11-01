@@ -36,6 +36,8 @@ public class HeroListFragment extends BaseFragment
 	private static final int kLOADER_ID_HEROES = 1;
 	
 	
+	private AQuery mAQuery = null;
+	
 	private LayoutInflater mInflater = null;
 	
 	private HeroListAdapter mHeroListAdapter = null;
@@ -45,49 +47,14 @@ public class HeroListFragment extends BaseFragment
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		View rootView = inflater.inflate(R.layout.fragment_hero_list, container, false);
+
+		mAQuery = new AQuery(this.getActivity());
 		
 		mInflater = inflater;
 		
-		mHeroListAdapter = new HeroListAdapter(this.getActivity(), R.layout.view_hero_thumbnail);
+		mHeroListAdapter = new HeroListAdapter(this.getActivity(), R.layout.layout_hero_thumbnail);
 		
-		// init view
-		{
-			GridView heroGridView = (GridView) rootView.findViewById(R.id.view_hero_grid);
-			heroGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-	
-				@Override
-				public void onItemClick(AdapterView<?> parent, View view,
-						int position, long id) {
-					if (DEBUG) Log.d(TAG, String.format("parent=%s view=%s position=%d id=%d", parent, view, position, id));
-					
-			        String heroId = (String) view.getTag(R.id.hero_id);
-			        HeroBase heroBase = (HeroBase) view.getTag(R.id.hero_base);
-			        if (StringUtil.isNullOrEmpty(heroId) || (heroBase == null)) {
-			        	Log.e(TAG, String.format("invalid tag: heroId=%s heroBase=%s", heroId, heroBase));
-			        	
-			        	return;
-			        }
-
-			        if (DEBUG) Log.d(TAG, String.format("heroId=%s heroBase=%s", heroId, heroBase));
-			        
-			        // open hero detail
-			        {
-				        Fragment fragment = new HeroDetailFragment();
-				        Bundle args = new Bundle();
-				        args.putString(HeroBase.kKEY_ID, heroId);
-				        fragment.setArguments(args);
-			            
-			            FragmentManager fm = getFragmentManager();
-			            FragmentTransaction transaction = fm.beginTransaction();
-			            transaction.replace(R.id.fragment_container, fragment);
-			            transaction.addToBackStack(null);
-			            transaction.commit();
-			        }
-				}
-				
-			});
-			heroGridView.setAdapter(mHeroListAdapter);
-		}
+		initView(rootView);
 		
 		return rootView;
 	}
@@ -175,16 +142,57 @@ public class HeroListFragment extends BaseFragment
 		}
 	}
 	
-	private class HeroListAdapter extends ArrayAdapter<HeroBase> {
+	private void initView(View rootView) {
+		if (rootView == null) {
+			Log.e(TAG, "rootView is null");
+			return;
+		}
 		
-		private final AQuery mAQuery;
+		GridView heroGridView = (GridView) rootView.findViewById(R.id.view_hero_grid);
+		{
+			heroGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+				@Override
+				public void onItemClick(AdapterView<?> parent, View view,
+						int position, long id) {
+					if (DEBUG) Log.d(TAG, String.format("parent=%s view=%s position=%d id=%d", parent, view, position, id));
+					
+			        String heroId = (String) view.getTag(R.id.hero_id);
+			        HeroBase heroBase = (HeroBase) view.getTag(R.id.hero_base);
+			        if (StringUtil.isNullOrEmpty(heroId) || (heroBase == null)) {
+			        	Log.e(TAG, String.format("invalid tag: heroId=%s heroBase=%s", heroId, heroBase));
+			        	
+			        	return;
+			        }
+
+			        if (DEBUG) Log.d(TAG, String.format("heroId=%s heroBase=%s", heroId, heroBase));
+			        
+			        // open hero detail
+			        {
+				        Fragment fragment = new HeroDetailFragment();
+				        Bundle args = new Bundle();
+				        args.putString(HeroBase.kKEY_ID, heroId);
+				        fragment.setArguments(args);
+			            
+			            FragmentManager fm = getFragmentManager();
+			            FragmentTransaction transaction = fm.beginTransaction();
+			            transaction.replace(R.id.fragment_container, fragment);
+			            transaction.addToBackStack(null);
+			            transaction.commit();
+			        }
+				}
+				
+			});
+			heroGridView.setAdapter(mHeroListAdapter);
+		}
+	}
+	
+	private class HeroListAdapter extends ArrayAdapter<HeroBase> {
 
 		private int mResource = -1;
 		
 		public HeroListAdapter(Context context, int resource) {
 			super(context, resource);
-
-			mAQuery = new AQuery(context);
 			
 			mResource = resource;
 		}
@@ -202,31 +210,35 @@ public class HeroListFragment extends BaseFragment
 	        
 	        heroBase = getItem(position);
 	        
-	        ImageView heroThumbnailView = (ImageView) view.findViewById(R.id.view_hero_thumbnail);
-	        if (heroBase == null) {
-	        	Log.e(TAG, "heroBase is null");
-	        	
-		        view.setTag(R.id.hero_id, null);
-		        view.setTag(R.id.hero_base, null);
-		        
-		        // TODO: need place holder
-		        mAQuery.id(heroThumbnailView).image("http://programmerguru.com/android-tutorial/wp-content/uploads/2014/01/aquery_introduction.png", false, true);
-		        heroThumbnailView.setContentDescription(getString(R.string.empty));
-	        } else {
-		        if (DEBUG) Log.d(TAG, String.format("heroBase={ mName=%s }", heroBase.mName));
-		        
-		        view.setTag(R.id.hero_id, heroBase.mId);
-		        view.setTag(R.id.hero_base, heroBase);
-		        
-		        if (StringUtil.isNullOrEmpty(heroBase.mThumbnailImageUri)) {
-		        	// TODO: need place holder
-			        mAQuery.id(heroThumbnailView).image("http://programmerguru.com/android-tutorial/wp-content/uploads/2014/01/aquery_introduction.png", false, true);
-		        } else {
-		        	// TODO: need place holder
-			        //mAQuery.id(heroThumbnailView).image(heroBase.mThumbnailImageUri, false, true, 0, fallbackId);
-			        mAQuery.id(heroThumbnailView).image(heroBase.mThumbnailImageUri, false, true);
+	        {
+		        ImageView heroThumbnailView = (ImageView) view.findViewById(R.id.view_hero_thumbnail);
+		        {
+			        if (heroBase == null) {
+			        	Log.e(TAG, "heroBase is null");
+			        	
+				        view.setTag(R.id.hero_id, null);
+				        view.setTag(R.id.hero_base, null);
+				        
+				        // TODO: need place holder
+				        mAQuery.id(heroThumbnailView).image("http://programmerguru.com/android-tutorial/wp-content/uploads/2014/01/aquery_introduction.png", false, true);
+				        heroThumbnailView.setContentDescription(getString(R.string.empty));
+			        } else {
+				        if (DEBUG) Log.d(TAG, String.format("heroBase={ mName=%s }", heroBase.mName));
+				        
+				        view.setTag(R.id.hero_id, heroBase.mId);
+				        view.setTag(R.id.hero_base, heroBase);
+				        
+				        if (StringUtil.isNullOrEmpty(heroBase.mThumbnailImageUri)) {
+				        	// TODO: need place holder
+					        mAQuery.id(heroThumbnailView).image("http://programmerguru.com/android-tutorial/wp-content/uploads/2014/01/aquery_introduction.png", false, true);
+				        } else {
+				        	// TODO: need place holder
+					        //mAQuery.id(heroThumbnailView).image(heroBase.mThumbnailImageUri, false, true, 0, fallbackId);
+					        mAQuery.id(heroThumbnailView).image(heroBase.mThumbnailImageUri, false, true);
+				        }
+				        heroThumbnailView.setContentDescription(heroBase.mName);
+			        }
 		        }
-		        heroThumbnailView.setContentDescription(heroBase.mName);
 	        }
 
 			return view;

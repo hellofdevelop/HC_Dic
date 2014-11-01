@@ -4,36 +4,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <!-- hero profile -->
+    <!-- hero -->
 
-    <LinearLayout
-        android:id="@+id/layout_hero_profile"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal" >
-
-        <include
-            android:id="@+id/view_hero_thumbnail"
-            layout="@layout/view_hero_thumbnail" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal" >
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal" >
-            </LinearLayout>
-        </LinearLayout>
-    </LinearLayout>
+	<include
+	    android:id="@+id/layout_hero"
+	    layout="@layout/layout_hero" />
 
     <!-- skill -->
 
@@ -44,7 +19,7 @@
         android:columnWidth="90dp"
         android:gravity="center"
         android:horizontalSpacing="10dp"
-        android:numColumns="auto_fit"
+        android:numColumns="2"
         android:stretchMode="columnWidth"
         android:verticalSpacing="10dp" />
 

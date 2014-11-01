@@ -4,4 +4,7 @@
     <item name="hero_id" type="id"/>
     <item name="hero_base" type="id"/>
 
+    <item name="skill_id" type="id"/>
+    <item name="skill_base" type="id"/>
+    
 </resources>
