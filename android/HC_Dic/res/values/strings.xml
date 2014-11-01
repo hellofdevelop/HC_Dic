@@ -8,4 +8,12 @@
     <!-- common -->
     <string name="empty"></string>
 
+    <!-- hero -->
+    <string name="hero_name_label">이름</string>
+    <string name="hero_description_label">설명</string>
+
+    <!-- hero skill -->
+    <string name="hero_skill_name_label">이름</string>
+    <string name="hero_skill_description_label">설명</string>
+    
 </resources>

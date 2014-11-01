@@ -22,6 +22,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.androidquery.AQuery;
 
@@ -54,7 +55,7 @@ implements LoaderManager.LoaderCallbacks<List<HeroBase>> {
 		
 		mInflater = inflater;
 		
-		mHeroSkillListAdapter = new HeroSkillListAdapter(this.getActivity(), R.layout.layout_hero_skill_thumbnail);
+		mHeroSkillListAdapter = new HeroSkillListAdapter(this.getActivity(), R.layout.layout_hero_skill);
 		
 		// set argument
 		Bundle args = this.getArguments();
@@ -240,7 +241,6 @@ implements LoaderManager.LoaderCallbacks<List<HeroBase>> {
 		View heroLayout = rootView.findViewById(R.id.layout_hero);
 		{
 			View heroThumbnailLayout = heroLayout.findViewById(R.id.layout_hero_thumbnail);
-			if (DEBUG) Log.d(TAG, String.format("heroThumbnailLayout=%s", heroThumbnailLayout));
 			{
 				ImageView heroThumbnailView = (ImageView) heroThumbnailLayout.findViewById(R.id.view_hero_thumbnail);
 		        if (mHeroBase == null) {
@@ -268,6 +268,15 @@ implements LoaderManager.LoaderCallbacks<List<HeroBase>> {
 			        }
 			        heroThumbnailView.setContentDescription(mHeroBase.mName);
 		        }
+			}
+			
+			TextView heroNameValueView = (TextView) heroLayout.findViewById(R.id.view_hero_name_value);
+			{
+				heroNameValueView.setText(mHeroBase.mName);
+			}
+			TextView heroDescriptionValueView = (TextView) heroLayout.findViewById(R.id.view_hero_description_value);
+			{
+				heroDescriptionValueView.setText(mHeroBase.mDescription);
 			}
 		}
 		
@@ -302,33 +311,45 @@ implements LoaderManager.LoaderCallbacks<List<HeroBase>> {
 	        
 	        skillBase = getItem(position);
 	        
-	        ImageView skillThumbnailView = (ImageView) view.findViewById(R.id.view_skill_thumbnail);
+	        View heroSkillLayout = view;
 	        {
-		        if (skillBase == null) {
-		        	Log.e(TAG, "skillBase is null");
-		        	
-			        view.setTag(R.id.hero_id, null);
-			        view.setTag(R.id.hero_base, null);
-			        
-			        // TODO: need place holder
-			        mAQuery.id(skillThumbnailView).image("http://programmerguru.com/android-tutorial/wp-content/uploads/2014/01/aquery_introduction.png", false, true);
-			        skillThumbnailView.setContentDescription(getString(R.string.empty));
-		        } else {
-			        if (DEBUG) Log.d(TAG, String.format("skillBase={ mName=%s }", skillBase.mName));
-			        
-			        view.setTag(R.id.skill_id, skillBase.mId);
-			        view.setTag(R.id.skill_base, skillBase);
-			        
-			        if (StringUtil.isNullOrEmpty(skillBase.mThumbnailImageUri)) {
-			        	// TODO: need place holder
+		        ImageView skillThumbnailView = (ImageView) heroSkillLayout.findViewById(R.id.view_skill_thumbnail);
+		        {
+			        if (skillBase == null) {
+			        	Log.e(TAG, "skillBase is null");
+			        	
+				        view.setTag(R.id.hero_id, null);
+				        view.setTag(R.id.hero_base, null);
+				        
+				        // TODO: need place holder
 				        mAQuery.id(skillThumbnailView).image("http://programmerguru.com/android-tutorial/wp-content/uploads/2014/01/aquery_introduction.png", false, true);
+				        skillThumbnailView.setContentDescription(getString(R.string.empty));
 			        } else {
-			        	// TODO: need place holder
-				        //mAQuery.id(heroThumbnailView).image(skillBase.mThumbnailImageUri, false, true, 0, fallbackId);
-				        mAQuery.id(skillThumbnailView).image(skillBase.mThumbnailImageUri, false, true);
+				        if (DEBUG) Log.d(TAG, String.format("skillBase={ mName=%s }", skillBase.mName));
+				        
+				        view.setTag(R.id.skill_id, skillBase.mId);
+				        view.setTag(R.id.skill_base, skillBase);
+				        
+				        if (StringUtil.isNullOrEmpty(skillBase.mThumbnailImageUri)) {
+				        	// TODO: need place holder
+					        mAQuery.id(skillThumbnailView).image("http://programmerguru.com/android-tutorial/wp-content/uploads/2014/01/aquery_introduction.png", false, true);
+				        } else {
+				        	// TODO: need place holder
+					        //mAQuery.id(heroThumbnailView).image(skillBase.mThumbnailImageUri, false, true, 0, fallbackId);
+					        mAQuery.id(skillThumbnailView).image(skillBase.mThumbnailImageUri, false, true);
+				        }
+				        skillThumbnailView.setContentDescription(skillBase.mName);
 			        }
-			        skillThumbnailView.setContentDescription(skillBase.mName);
 		        }
+				
+				TextView heroSkillNameValueView = (TextView) heroSkillLayout.findViewById(R.id.view_hero_skill_name_value);
+				{
+					heroSkillNameValueView.setText(skillBase.mName);
+				}
+				TextView heroSkillDescriptionValueView = (TextView) heroSkillLayout.findViewById(R.id.view_hero_skill_description_value);
+				{
+					heroSkillDescriptionValueView.setText(skillBase.mDescription);
+				}
 	        }
 
 			return view;

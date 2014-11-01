@@ -6,9 +6,9 @@
 
     <!-- hero -->
 
-	<include
-	    android:id="@+id/layout_hero"
-	    layout="@layout/layout_hero" />
+    <include
+        android:id="@+id/layout_hero"
+        layout="@layout/layout_hero" />
 
     <!-- skill -->
 
@@ -16,20 +16,19 @@
         android:id="@+id/view_hero_skill_grid"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:columnWidth="90dp"
+        android:background="#aaaaaaaa"
+        android:columnWidth="100dp"
         android:gravity="center"
         android:horizontalSpacing="10dp"
-        android:numColumns="2"
+        android:numColumns="1"
         android:stretchMode="columnWidth"
         android:verticalSpacing="10dp" />
 
     <!-- banner -->
 
-	<!--
     <com.google.android.gms.ads.AdView
         android:id="@+id/adview_footer_banner"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-    -->
 
 </LinearLayout>
