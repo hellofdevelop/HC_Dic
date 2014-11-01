@@ -37,8 +37,6 @@
     <com.google.android.gms.ads.AdView
         android:id="@+id/adview_footer_banner"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        ads:adSize="SMART_BANNER"
-        ads:adUnitId="@string/adunit_hero_list_footer_banner" />
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

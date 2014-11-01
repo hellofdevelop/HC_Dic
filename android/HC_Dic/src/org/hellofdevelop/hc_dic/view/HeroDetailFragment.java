@@ -130,8 +130,6 @@ implements LoaderManager.LoaderCallbacks<List<HeroBase>> {
 		
 		switch (loaderId) {
 		case kLOADER_ID_HEROES:
-			initView(rootView);
-			
 			// find hero
 			{
 				Iterator<HeroBase> it = data.iterator();
@@ -171,7 +169,9 @@ implements LoaderManager.LoaderCallbacks<List<HeroBase>> {
 		
 		switch (loaderId) {
 		case kLOADER_ID_HEROES:
-			initView(rootView);
+			mHeroBase = null;
+			
+			setView(rootView);
 			break;
 			
 		default:

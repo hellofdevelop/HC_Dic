@@ -111,6 +111,8 @@ public class HeroListFragment extends BaseFragment
 		
 		int loaderId = loader.getId();
 		
+		View rootView = getView();
+		
 		switch (loaderId) {
 		case kLOADER_ID_HEROES:
 			if (mHeroListAdapter == null) {
@@ -134,6 +136,8 @@ public class HeroListFragment extends BaseFragment
 		if (DEBUG) Log.v(TAG, String.format("loader=%s", loader));
 		
 		int loaderId = loader.getId();
+		
+		View rootView = getView();
 		
 		switch (loaderId) {
 		case kLOADER_ID_HEROES:
