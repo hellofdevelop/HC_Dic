@@ -1,6 +1,6 @@
-package org.hellofdevelp.hc_dic.util;
+package org.hellofdevelop.hc_dic.util;
 
-import org.hellofdevelp.hc_dic.Const;
+import org.hellofdevelop.hc_dic.Const;
 
 public class StringUtil {
 	

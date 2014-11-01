@@ -1,6 +1,6 @@
-package org.hellofdevelp.hc_dic.view;
+package org.hellofdevelop.hc_dic.view;
 
-import org.hellofdevelp.hc_dic.Const;
+import org.hellofdevelop.hc_dic.Const;
 import org.hellofdevelp.hc_dic.R;
 import org.hellofdevelp.hc_dic.R.id;
 import org.hellofdevelp.hc_dic.R.layout;

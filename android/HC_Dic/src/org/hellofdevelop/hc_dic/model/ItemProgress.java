@@ -1,4 +1,4 @@
-package org.hellofdevelp.hc_dic.model;
+package org.hellofdevelop.hc_dic.model;
 
 import com.google.gson.Gson;
 

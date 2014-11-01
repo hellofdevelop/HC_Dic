@@ -23,7 +23,7 @@
             android:value="@integer/google_play_services_version" />
 
         <activity
-            android:name="org.hellofdevelp.hc_dic.view.HeroActivity"
+            android:name="org.hellofdevelop.hc_dic.view.HeroActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

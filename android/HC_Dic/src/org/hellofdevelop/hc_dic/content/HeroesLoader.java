@@ -1,14 +1,14 @@
-package org.hellofdevelp.hc_dic.content;
+package org.hellofdevelop.hc_dic.content;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.List;
 
-import org.hellofdevelp.hc_dic.Const;
+import org.hellofdevelop.hc_dic.Const;
+import org.hellofdevelop.hc_dic.model.HeroBase;
+import org.hellofdevelop.hc_dic.model.HeroesJson;
 import org.hellofdevelp.hc_dic.R;
-import org.hellofdevelp.hc_dic.model.HeroBase;
-import org.hellofdevelp.hc_dic.model.HeroesJson;
 
 import com.google.gson.Gson;
 

@@ -1,12 +1,12 @@
-package org.hellofdevelp.hc_dic.view;
+package org.hellofdevelop.hc_dic.view;
 
 import java.util.List;
 
-import org.hellofdevelp.hc_dic.Const;
+import org.hellofdevelop.hc_dic.Const;
+import org.hellofdevelop.hc_dic.content.HeroesLoader;
+import org.hellofdevelop.hc_dic.model.HeroBase;
 import org.hellofdevelp.hc_dic.R;
 import org.hellofdevelp.hc_dic.R.layout;
-import org.hellofdevelp.hc_dic.content.HeroesLoader;
-import org.hellofdevelp.hc_dic.model.HeroBase;
 
 import android.os.Bundle;
 import android.support.v4.app.LoaderManager;
