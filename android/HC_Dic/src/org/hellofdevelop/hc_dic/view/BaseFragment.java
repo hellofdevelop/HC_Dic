@@ -4,6 +4,7 @@ import org.hellofdevelop.hc_dic.Const;
 import org.hellofdevelop.hc_dic.HC_DicApplication;
 import org.hellofdevelop.hc_dic.HC_DicApplication.TrackerName;
 
+import android.app.Application;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.LoaderManager;

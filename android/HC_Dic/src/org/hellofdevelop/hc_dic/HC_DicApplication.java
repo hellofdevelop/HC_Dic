@@ -2,8 +2,6 @@ package org.hellofdevelop.hc_dic;
 
 import java.util.HashMap;
 
-import org.hellofdevelp.hc_dic.R;
-
 import android.app.Application;
 import android.util.Log;
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.hellofdevelp.hc_dic"
+    package="org.hellofdevelop.hc_dic"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -13,6 +13,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
+        android:name=".HC_DicApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
@@ -23,7 +24,7 @@
             android:value="@integer/google_play_services_version" />
 
         <activity
-            android:name="org.hellofdevelop.hc_dic.view.HeroActivity"
+            android:name=".view.HeroActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

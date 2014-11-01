@@ -3,10 +3,9 @@ package org.hellofdevelop.hc_dic.view;
 import java.util.List;
 
 import org.hellofdevelop.hc_dic.Const;
+import org.hellofdevelop.hc_dic.R;
 import org.hellofdevelop.hc_dic.content.HeroesLoader;
 import org.hellofdevelop.hc_dic.model.HeroBase;
-import org.hellofdevelp.hc_dic.R;
-import org.hellofdevelp.hc_dic.R.layout;
 
 import android.os.Bundle;
 import android.support.v4.app.LoaderManager;

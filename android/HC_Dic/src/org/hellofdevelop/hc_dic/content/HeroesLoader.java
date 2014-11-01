@@ -6,15 +6,15 @@ import java.io.InputStreamReader;
 import java.util.List;
 
 import org.hellofdevelop.hc_dic.Const;
+import org.hellofdevelop.hc_dic.R;
 import org.hellofdevelop.hc_dic.model.HeroBase;
 import org.hellofdevelop.hc_dic.model.HeroesJson;
-import org.hellofdevelp.hc_dic.R;
-
-import com.google.gson.Gson;
 
 import android.content.Context;
 import android.support.v4.content.AsyncTaskLoader;
 import android.util.Log;
+
+import com.google.gson.Gson;
 
 public class HeroesLoader extends AsyncTaskLoader<List<HeroBase>> {
 	

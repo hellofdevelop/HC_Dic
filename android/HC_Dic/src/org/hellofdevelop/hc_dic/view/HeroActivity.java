@@ -1,10 +1,7 @@
 package org.hellofdevelop.hc_dic.view;
 
 import org.hellofdevelop.hc_dic.Const;
-import org.hellofdevelp.hc_dic.R;
-import org.hellofdevelp.hc_dic.R.id;
-import org.hellofdevelp.hc_dic.R.layout;
-import org.hellofdevelp.hc_dic.R.menu;
+import org.hellofdevelop.hc_dic.R;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
