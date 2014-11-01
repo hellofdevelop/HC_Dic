@@ -25,6 +25,10 @@ import android.widget.GridView;
 import android.widget.ImageView;
 
 import com.androidquery.AQuery;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdView;
 
 public class HeroListFragment extends BaseFragment
 	implements LoaderManager.LoaderCallbacks<List<HeroBase>> {
@@ -184,6 +188,54 @@ public class HeroListFragment extends BaseFragment
 				
 			});
 			heroGridView.setAdapter(mHeroListAdapter);
+		}
+		
+		AdView footerBannerAdView = (AdView) rootView.findViewById(R.id.adview_footer_banner);
+		{
+			AdRequest adRequest = new AdRequest.Builder()
+					.addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+					.build();
+			footerBannerAdView.setAdSize(AdSize.SMART_BANNER);
+			footerBannerAdView.setAdUnitId(getString(R.string.adunit_hero_list_footer_banner));
+			footerBannerAdView.setAdListener(new AdListener() {
+
+				@Override
+				public void onAdLoaded() {
+					super.onAdLoaded();
+					
+					if (DEBUG) Log.d(TAG, "");
+				}
+
+				@Override
+				public void onAdFailedToLoad(int errorCode) {
+					super.onAdFailedToLoad(errorCode);
+					
+					Log.e(TAG, String.format("errorCode=%d", errorCode));
+				}
+
+				@Override
+				public void onAdOpened() {
+					super.onAdOpened();
+					
+					if (DEBUG) Log.d(TAG, "");
+				}
+
+				@Override
+				public void onAdClosed() {
+					super.onAdClosed();
+					
+					if (DEBUG) Log.d(TAG, "");
+				}
+
+				@Override
+				public void onAdLeftApplication() {
+					super.onAdLeftApplication();
+					
+					if (DEBUG) Log.d(TAG, "");
+				}
+				
+			});
+			footerBannerAdView.loadAd(adRequest);
 		}
 	}
 	
