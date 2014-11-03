@@ -5,27 +5,26 @@ import org.hellofdevelop.hc_dic.R;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class HeroActivity extends BaseActivity {
+public class VideoActivity extends BaseActivity {
 	
-	private static final String TAG = HeroActivity.class.getSimpleName();
+	private static final String TAG = VideoActivity.class.getSimpleName();
 	private static final boolean DEBUG = Const.DEBUG;
 
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_hero);
+        setContentView(R.layout.activity_video);
 
-        // open HeroList
+        // open PlayList
         {
-            Fragment fragment = new HeroListFragment();
+            Fragment fragment = new YouTubePlayListFragment();
             
             FragmentManager fm = getSupportFragmentManager();
             FragmentTransaction transaction = fm.beginTransaction();
@@ -69,6 +68,6 @@ public class HeroActivity extends BaseActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
-    }
-    
+    }	
+
 }
