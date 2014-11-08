@@ -10,30 +10,38 @@ public class HeroBase extends ModelBase {
 	
 	public enum Position {
 		
-		kFront("Front"),
-		kCentral("Central"),
-		kBack("Back");
+		Front,
+		Central,
+		Back;
 		
-		
-		public final String mCode;
-		
-		private Position(String code) {
-			mCode = code;
+		public static List<String> getNameList() {
+			Position[] values = Position.values();
+			
+			List<String> names = new ArrayList<String>();
+			for (int i = 0; i < values.length; i++) {
+				names.add(values[i].name());
+			}
+			
+			return names;
 		}
 		
 	}
 
 	public enum Type {
 		
-		kStrength("Strength"),
-		kIntelligence("Intelligence"),
-		kAgility("Agility");
+		Strength,
+		Intelligence,
+		Agility;
 		
-		
-		public final String mCode;
-		
-		private Type(String code) {
-			mCode = code;
+		public static List<String> getNameList() {
+			Type[] values = Type.values();
+			
+			List<String> names = new ArrayList<String>();
+			for (int i = 0; i < values.length; i++) {
+				names.add(values[i].name());
+			}
+			
+			return names;
 		}
 		
 	}

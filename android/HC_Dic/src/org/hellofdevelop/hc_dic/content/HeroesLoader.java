@@ -25,6 +25,17 @@ public class HeroesLoader extends AsyncTaskLoader<List<HeroBase>> {
 	private List<HeroBase> mHeroes = null;
 	
 	public HeroesLoader(Context context) {
+		this(context, null, null);
+	}
+	
+	public HeroesLoader(Context context, String heroId) {
+		super(context);
+		
+		// TODO: need observer
+		// http://www.androiddesignpatterns.com/2012/08/implementing-loaders.html
+	}
+	
+	public HeroesLoader(Context context, HeroBase.Position heroPosition, HeroBase.Type heroType) {
 		super(context);
 		
 		// TODO: need observer
