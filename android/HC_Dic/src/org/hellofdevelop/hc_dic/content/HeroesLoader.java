@@ -3,12 +3,15 @@ package org.hellofdevelop.hc_dic.content;
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import org.hellofdevelop.hc_dic.Const;
 import org.hellofdevelop.hc_dic.R;
 import org.hellofdevelop.hc_dic.model.HeroBase;
 import org.hellofdevelop.hc_dic.model.HeroesJson;
+import org.hellofdevelop.hc_dic.util.StringUtil;
 
 import android.content.Context;
 import android.support.v4.content.AsyncTaskLoader;
@@ -22,33 +25,79 @@ public class HeroesLoader extends AsyncTaskLoader<List<HeroBase>> {
 	private static final boolean DEBUG = Const.DEBUG;
 
 	
+	private String mHeroId = null;
+	private HeroBase.HeroPosition mHeroPosition = null;
+	private HeroBase.HeroType mHeroType = null;
+	
 	private List<HeroBase> mHeroes = null;
 	
 	public HeroesLoader(Context context) {
-		this(context, null, null);
+		super(context);
+		
+		// TODO: need observer
+		// http://www.androiddesignpatterns.com/2012/08/implementing-loaders.html
 	}
 	
 	public HeroesLoader(Context context, String heroId) {
-		super(context);
-		
-		// TODO: need observer
-		// http://www.androiddesignpatterns.com/2012/08/implementing-loaders.html
+		this(context);
+
+		mHeroId = heroId;
 	}
 	
-	public HeroesLoader(Context context, HeroBase.Position heroPosition, HeroBase.Type heroType) {
-		super(context);
+	public HeroesLoader(Context context, HeroBase.HeroPosition heroPosition, HeroBase.HeroType heroType) {
+		this(context);
 		
-		// TODO: need observer
-		// http://www.androiddesignpatterns.com/2012/08/implementing-loaders.html
+		mHeroPosition = heroPosition;
+		mHeroType = heroType;
 	}
 	
 	@Override
 	public List<HeroBase> loadInBackground() {
 		if (DEBUG) Log.v(TAG, "");
 
+		List<HeroBase> heroes = null;
+		
 		HeroesJson jsonHeroes = loadJsonHeroes();
 		
-		return jsonHeroes.mHeroes;
+		if (StringUtil.isNullOrEmpty(mHeroId) == false) {
+			if (DEBUG) Log.d(TAG, String.format("mHeroId=%s", mHeroId));
+			
+			heroes = new ArrayList<HeroBase>();
+			
+			Iterator<HeroBase> it = jsonHeroes.mHeroes.iterator();
+			while (it.hasNext()) {
+				HeroBase hero = it.next();
+				if (hero.mId.compareTo(mHeroId) == 0) {
+					heroes.add(hero);
+				}
+			}
+		} else if ((mHeroPosition != null) || (mHeroType != null)) {
+			if (DEBUG) Log.d(TAG, String.format("mHeroPosition=%s mHeroType=%s", mHeroPosition, mHeroType));
+			
+			heroes = new ArrayList<HeroBase>();
+			
+			Iterator<HeroBase> it = jsonHeroes.mHeroes.iterator();
+			while (it.hasNext()) {
+				HeroBase hero = it.next();
+				if ((mHeroPosition != null) && (mHeroType != null)) {
+					if ((hero.mHeroPosition == mHeroPosition) && (hero.mHeroType == mHeroType)) {
+						heroes.add(hero);
+					}
+				} else if (mHeroPosition != null) {
+					if (hero.mHeroPosition == mHeroPosition) {
+						heroes.add(hero);
+					}
+				} else if (mHeroType != null) {
+					if (hero.mHeroType == mHeroType) {
+						heroes.add(hero);
+					}
+				}
+			}
+		} else {
+			heroes = jsonHeroes.mHeroes;
+		}
+		
+		return heroes;
 	}
 
 	@Override
@@ -87,7 +136,6 @@ public class HeroesLoader extends AsyncTaskLoader<List<HeroBase>> {
 		if (mHeroes != null) {
 			mHeroes = null;
 		}
-		
 	}
 
 	@Override

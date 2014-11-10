@@ -8,14 +8,14 @@ import com.google.gson.annotations.SerializedName;
 
 public class HeroBase extends ModelBase {
 	
-	public enum Position {
+	public enum HeroPosition {
 		
 		Front,
 		Central,
 		Back;
 		
 		public static List<String> getNameList() {
-			Position[] values = Position.values();
+			HeroPosition[] values = HeroPosition.values();
 			
 			List<String> names = new ArrayList<String>();
 			for (int i = 0; i < values.length; i++) {
@@ -27,14 +27,14 @@ public class HeroBase extends ModelBase {
 		
 	}
 
-	public enum Type {
+	public enum HeroType {
 		
 		Strength,
 		Intelligence,
 		Agility;
 		
 		public static List<String> getNameList() {
-			Type[] values = Type.values();
+			HeroType[] values = HeroType.values();
 			
 			List<String> names = new ArrayList<String>();
 			for (int i = 0; i < values.length; i++) {
@@ -75,10 +75,10 @@ public class HeroBase extends ModelBase {
 	public final String mDescription;
 	
 	@SerializedName("position")
-	public final Position mPosition;
+	public final HeroPosition mHeroPosition;
 	
 	@SerializedName("type")
-	public final Type mType;
+	public final HeroType mHeroType;
 	
 	@SerializedName("thumbnail_image_uri")
 	public final String mThumbnailImageUri;
@@ -94,15 +94,15 @@ public class HeroBase extends ModelBase {
 	
 	public HeroBase(String id,
 			String name, String description,
-			Position position, Type type,
+			HeroPosition position, HeroType type,
 			String thumbnailImageUri, String portraitImageUri) {
 		super(ModelBase.ModelType.kHero, id);
 		
 		mName = name;
 		mDescription = description;
 		
-		mPosition = position;
-		mType = type;
+		mHeroPosition = position;
+		mHeroType = type;
 		
 		mThumbnailImageUri = thumbnailImageUri;
 		mPortraitImageUri = portraitImageUri;
@@ -111,7 +111,7 @@ public class HeroBase extends ModelBase {
 	public HeroBase(HeroBase heroBase) {
 		this(heroBase.mId,
 				heroBase.mName, heroBase.mDescription,
-				heroBase.mPosition, heroBase.mType,
+				heroBase.mHeroPosition, heroBase.mHeroType,
 				heroBase.mThumbnailImageUri, heroBase.mPortraitImageUri);
 	}
 

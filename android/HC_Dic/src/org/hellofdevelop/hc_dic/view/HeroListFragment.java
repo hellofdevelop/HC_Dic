@@ -98,13 +98,28 @@ public class HeroListFragment extends BaseFragment
 		
 		switch (loaderId) {
 		case kLOADER_ID_HEROES:
-			HeroBase.Position selectedPosition = getSelectedPosition(rootView);
+			HeroBase.HeroPosition heroPosition = null;
+			HeroBase.HeroType heroType = null;
+			if (args != null) {
+				String strHeroPosition = args.getString(HeroBase.HeroPosition.class.getSimpleName());
+				if (StringUtil.isNullOrEmpty(strHeroPosition) == false) {
+					heroPosition = HeroBase.HeroPosition.valueOf(strHeroPosition);
+				}
+				
+				String strHeroType = args.getString(HeroBase.HeroType.class.getSimpleName());
+				if (StringUtil.isNullOrEmpty(strHeroType) == false) {
+					heroType = HeroBase.HeroType.valueOf(strHeroType);
+				}
+			}
+			/*
+			HeroBase.HeroPosition selectedPosition = getSelectedPosition(rootView);
 			Log.d(TAG, String.format("selectedPosition=%s", selectedPosition));
 			
-			HeroBase.Type selectedType = getSelectedType(rootView);
+			HeroBase.HeroType selectedType = getSelectedType(rootView);
 			Log.d(TAG, String.format("selectedType=%s", selectedType));
+			*/
 			
-			return new HeroesLoader(this.getActivity(), selectedPosition, selectedType);
+			return new HeroesLoader(this.getActivity(), heroPosition, heroType);
 			//break;
 			
 		default:
@@ -170,7 +185,7 @@ public class HeroListFragment extends BaseFragment
 		{
 			List<String> positions = new ArrayList<String>();
 			positions.add("All");
-			positions.addAll(HeroBase.Position.getNameList());
+			positions.addAll(HeroBase.HeroPosition.getNameList());
 			
 			ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<String>(getActivity(),
 					R.layout.layout_hero_position_spinner_item, R.id.view_hero_position,
@@ -182,10 +197,19 @@ public class HeroListFragment extends BaseFragment
 						int position, long id) {
 					if (DEBUG) Log.d(TAG, String.format("parent=%s view=%s position=%d id=%d", parent, view, position, id));
 
-					HeroBase.Position selectedPosition = getSelectedPosition(rootView);
-					Log.d(TAG, String.format("selectedPosition=%s", selectedPosition));
+					HeroBase.HeroPosition selectedPosition = getSelectedPosition(rootView);
+					HeroBase.HeroType selectedType = getSelectedType(rootView);
+					Log.d(TAG, String.format("selectedPosition=%s selectedType", selectedPosition, selectedType));
 					
-					HeroListFragment.this.getLoaderManager().restartLoader(kLOADER_ID_HEROES, null, HeroListFragment.this);
+					Bundle args = new Bundle();
+					if (selectedPosition != null) {
+						args.putString(HeroBase.HeroPosition.class.getSimpleName(), selectedPosition.name());
+					}
+					if (selectedType != null) {
+						args.putString(HeroBase.HeroType.class.getSimpleName(), selectedType.name());
+					}
+					
+					HeroListFragment.this.startLoader(kLOADER_ID_HEROES, args, HeroListFragment.this);
 				}
 
 				@Override
@@ -193,7 +217,7 @@ public class HeroListFragment extends BaseFragment
 					if (DEBUG) Log.d(TAG, String.format("parent=%s", parent));
 					
 					// All
-					HeroListFragment.this.getLoaderManager().restartLoader(kLOADER_ID_HEROES, null, HeroListFragment.this);
+					HeroListFragment.this.startLoader(kLOADER_ID_HEROES, null, HeroListFragment.this);
 				}
 
 			});
@@ -204,7 +228,7 @@ public class HeroListFragment extends BaseFragment
 		{
 			List<String> types = new ArrayList<String>();
 			types.add("All");
-			types.addAll(HeroBase.Type.getNameList());
+			types.addAll(HeroBase.HeroType.getNameList());
 			
 			ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<String>(getActivity(),
 					R.layout.layout_hero_type_spinner_item, R.id.view_hero_type,
@@ -216,10 +240,19 @@ public class HeroListFragment extends BaseFragment
 						int position, long id) {
 					if (DEBUG) Log.d(TAG, String.format("parent=%s view=%s position=%d id=%d", parent, view, position, id));
 
-					HeroBase.Type selectedType = getSelectedType(rootView);
-					Log.d(TAG, String.format("selectedType=%s", selectedType));
+					HeroBase.HeroPosition selectedPosition = getSelectedPosition(rootView);
+					HeroBase.HeroType selectedType = getSelectedType(rootView);
+					Log.d(TAG, String.format("selectedPosition=%s selectedType", selectedPosition, selectedType));
 					
-					HeroListFragment.this.getLoaderManager().restartLoader(kLOADER_ID_HEROES, null, HeroListFragment.this);
+					Bundle args = new Bundle();
+					if (selectedPosition != null) {
+						args.putString(HeroBase.HeroPosition.class.getSimpleName(), selectedPosition.name());
+					}
+					if (selectedType != null) {
+						args.putString(HeroBase.HeroType.class.getSimpleName(), selectedType.name());
+					}
+					
+					HeroListFragment.this.startLoader(kLOADER_ID_HEROES, args, HeroListFragment.this);
 				}
 
 				@Override
@@ -227,7 +260,7 @@ public class HeroListFragment extends BaseFragment
 					if (DEBUG) Log.d(TAG, String.format("parent=%s", parent));
 					
 					// All
-					HeroListFragment.this.getLoaderManager().restartLoader(kLOADER_ID_HEROES, null, HeroListFragment.this);
+					HeroListFragment.this.startLoader(kLOADER_ID_HEROES, null, HeroListFragment.this);
 				}
 
 			});
@@ -321,7 +354,7 @@ public class HeroListFragment extends BaseFragment
 		}
 	}
 	
-	private HeroBase.Position getSelectedPosition(View rootView) {
+	private HeroBase.HeroPosition getSelectedPosition(View rootView) {
 		Spinner heroPositionSpinner = (Spinner) rootView.findViewById(R.id.spinner_hero_position);
 		
 		View view = heroPositionSpinner.getSelectedView();
@@ -337,9 +370,9 @@ public class HeroListFragment extends BaseFragment
 			return null;
 		}
 		
-		HeroBase.Position selectedPosition;
+		HeroBase.HeroPosition selectedPosition;
 		try {
-			selectedPosition = HeroBase.Position.valueOf(String.valueOf(heroPositionView.getText()));
+			selectedPosition = HeroBase.HeroPosition.valueOf(String.valueOf(heroPositionView.getText()));
 			Log.d(TAG, String.format("selectedPosition=%s", selectedPosition));
 			
 			return selectedPosition;
@@ -350,7 +383,7 @@ public class HeroListFragment extends BaseFragment
 		}
 	}
 	
-	private HeroBase.Type getSelectedType(View rootView) {
+	private HeroBase.HeroType getSelectedType(View rootView) {
 		Spinner heroTypeSpinner = (Spinner) rootView.findViewById(R.id.spinner_hero_type);
 		
 		View view = heroTypeSpinner.getSelectedView();
@@ -366,9 +399,9 @@ public class HeroListFragment extends BaseFragment
 			return null;
 		}
 		
-		HeroBase.Type selectedType;
+		HeroBase.HeroType selectedType;
 		try {
-			selectedType = HeroBase.Type.valueOf(String.valueOf(heroTypeView.getText()));
+			selectedType = HeroBase.HeroType.valueOf(String.valueOf(heroTypeView.getText()));
 			Log.d(TAG, String.format("selectedType=%s", selectedType));
 			
 			return selectedType;

@@ -8,7 +8,7 @@ public class StringUtil {
 	private static final boolean DEBUG = Const.DEBUG;
 
 	public static boolean isNullOrEmpty(String string) {
-		return ((string != null) && (string.isEmpty()));
+		return ((string == null) || (string.isEmpty()));
 	}
 	
 }
