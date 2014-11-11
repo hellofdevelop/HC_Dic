@@ -3,9 +3,27 @@
     tools:context="org.hellofdevelp.hc_dic.MainActivity" >
 
     <item
+        android:id="@+id/action_heroes"
+        android:orderInCategory="10"
+        android:showAsAction="ifRoom"
+        android:title="@string/action_heroes"/>
+
+    <item
+        android:id="@+id/action_video"
+        android:orderInCategory="11"
+        android:showAsAction="ifRoom"
+        android:title="@string/action_video"/>
+    
+    <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
         android:showAsAction="never"
         android:title="@string/action_settings"/>
 
+    <item
+        android:id="@+id/action_about"
+        android:orderInCategory="101"
+        android:showAsAction="never"
+        android:title="@string/action_about"/>
+    
 </menu>

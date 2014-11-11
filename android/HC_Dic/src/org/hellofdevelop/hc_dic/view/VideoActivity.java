@@ -3,10 +3,12 @@ package org.hellofdevelop.hc_dic.view;
 import org.hellofdevelop.hc_dic.Const;
 import org.hellofdevelop.hc_dic.R;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -60,14 +62,33 @@ public class VideoActivity extends BaseActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
+		if (DEBUG) Log.v(TAG, String.format("item=%s", item));
+
+		// Handle action bar item clicks here. The action bar will
+		// automatically handle clicks on the Home/Up button, so long
+		// as you specify a parent activity in AndroidManifest.xml.
+		int id = item.getItemId();
+		switch (id) {
+		case R.id.action_heroes: {
+			Intent intent = new Intent(this, HeroActivity.class);
+			startActivity(intent);
+			return true;
+		}
+		case R.id.action_video: {
+			return true;
+		}
+		case R.id.action_settings: {
+			return true;
+		}
+		case R.id.action_about: {
+			return true;
+		}
+		default: {
+			Log.e(TAG, String.format("unknown id=%d", id));
+		}
+		}
+
+		return super.onOptionsItemSelected(item);
     }	
 
 }
