@@ -70,6 +70,8 @@ public class VideoActivity extends BaseActivity {
 		int id = item.getItemId();
 		switch (id) {
 		case R.id.action_heroes: {
+			finish();
+			
 			Intent intent = new Intent(this, HeroActivity.class);
 			startActivity(intent);
 			return true;

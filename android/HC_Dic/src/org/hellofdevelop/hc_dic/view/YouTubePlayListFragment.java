@@ -54,8 +54,9 @@ public class YouTubePlayListFragment extends BaseFragment {
 		//super.startLoader(kLOADER_ID_HEROES, null, this);
 		{
 			String baseUrl = "https://www.googleapis.com/youtube/v3";
+			//String apiKey = "AIzaSyDPAQoNlJAKskM5mNq9X_U8UQ_-MXTEN14";
 			String apiKey = "AIzaSyB0ie-L57C9wCyE8fuVbJSiXU_G2w44BrI";
-			String playlistId = "AIzaSyB0ie-L57C9wCyE8fuVbJSiXU_G2w44BrI";
+			String playlistId = "PLRDiJXGa4C2AJ3gozkNNldnzXRpTHbbnF";
 			
 			String uriString = String.format("%s/playlistItems?part=contentDetails&playlistId=%s&key=%s", baseUrl, playlistId, apiKey);
 
